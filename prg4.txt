@@ -1,0 +1,31 @@
+
+class MyPoint{
+int x;
+int y;
+public MyPoint () {
+this.x=0;
+this.y=0;
+}
+public MyPoint (int x1, int y1) {
+this.x=x1;
+this.y=y1;
+}
+public double calcDistance (int x1, int y1) {
+int xDiff=this.x-x1;
+int yDiff=this.y-y1;
+double distance=Math.sqrt(xDiff*xDiff + yDiff*yDiff); 
+return distance;
+}
+}
+public class TestMyPoint {
+public static void main(String[] args) {
+System.out.println("Point");
+MyPoint p1=new MyPoint ();
+MyPoint p2=new MyPoint (3,4);
+MyPoint p3=new MyPoint (9,12);
+System.out.println (p1.x + "," + p1.y); 
+System.out.println (p2.x +","  + p2.y);
+System.out.println (p3.x + "," + p3.y);
+System.out.println (p1.calcDistance (9,12));
+}
+}

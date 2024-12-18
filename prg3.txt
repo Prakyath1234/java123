@@ -1,0 +1,25 @@
+
+class Employee {
+int id;
+String name;
+double salary;
+public Employee (int id1, String name1, double salary1) {
+this.id=id1;
+this.name=name1;
+this.salary=salary1;
+}
+public double raiseSalary (int percent) {
+double increment=salary* (percent/100.0);
+salary=salary+increment;
+return salary;
+}
+}
+public class TestEmployee {
+public static void main(String[] args) {
+System.out.println("Employee");
+Employee Madan=new Employee (16, "Madan",10000);
+System.out.println(16 +" "+"Madan's salary is "+ Madan.salary);
+Madan.raiseSalary (40);
+System.out.println(16 +" "+"Madan's new salary is "+ Madan.salary);
+}
+}
